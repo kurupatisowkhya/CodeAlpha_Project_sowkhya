@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book 1: Title of Book 1</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      color: #333; /* Dark text color */
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .page {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* Add margin between pages */
+    }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      color: #2c3e50; /* Dark blue text color */
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #2980b9; /* Blue text color */
+      margin-top: 0;
+    }
+    p {
+      color: #333; /* Dark text color */
+    }
+    ol {
+      margin: 0;
+      padding: 0 0 0 20px;
+      list-style: none;
+    }
+    ol li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      cursor: pointer; /* Change cursor to pointer on hover */
+    }
+    ol li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2980b9; /* Blue bullet color */
+    }
+    #chapterInfo, #observationInfo {
+      background-color: #f9f9f9; /* Light grey background */
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    #chapterDetails, #observationDetails {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333; /* Dark text color */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page">
+      <h1>Book 1: Computer Networks</h1>
+      <h2>Author: Author Name</h2>
+      <div class="summary">
+        <h2>Summary:</h2>
+        <p>A computer network is a system that connects numerous independent computers, allowing them to share information (data) and resources. These interconnected devices enable seamless communication and collaboration</p>
+      </div>
+      <h2>Chapters:</h2>
+      <ol id="chaptersList">
+        <li data-info="Understand the uses of computer networks, including business applications, home applications, and mobile users.
+Explore network hardware types such as LANs (Local Area Networks), MANs (Metropolitan Area Networks), and WANs (Wide Area Networks).
+Learn about network software, including protocol hierarchies and design considerations for different layers.
+Familiarize yourself with reference models like the OSI Reference Model and the TCP/IP Reference Model.
+Study example networks like the Internet, Ethernet, and connection-oriented networks." data-observation="This process involves continuously monitoring a network for various reasons, such as system failures, slow traffic, network-related issues, and data analytics. It helps discover, map, and monitor network components like switches, routers, servers, and virtual machines (VMs). Network monitoring is crucial for maintaining network health and performance">Chapter 1:Introduction to Computer Networks</li>
+        <li data-info="Dive into network layer design issues, including store-and-forward packet switching.
+        Explore services provided to the transport layer and the implementation of connectionless and connection-oriented services.
+        Understand routing algorithms, such as shortest path, flooding, distance vector routing, and link state routing.
+        Learn about routing for mobile hosts." data-observation="Packet capture is the technique of analyzing, intercepting, and recording data packets exchanged over a network. It helps track packet loss, manage traffic, and detect vulnerabilities or intrusion attempts. Tools like Wireshark and tcpdump are commonly used for packet sniffing and network analysis">Chapter 2:Network Layer</li>
+        <li data-info="Explore congestion control algorithms and policies.
+        Understand techniques for achieving good quality of service (QoS).
+        Differentiate between integrated services and differentiated services." data-observation=" This technique captures traffic data and analyzes network traffic flow and volume. It helps determine how data moves through the network by examining communication between devices.">Chapter 3:Congestion Control and Quality of Service</li>
+        <li data-info="Compare different networks and learn how to connect them.
+        Study concatenated virtual circuits, connectionless internetworking, tunneling, and internetwork routing.
+        Understand fragmentation." data-observation="Simple Network Management Protocol (SNMP) collects information from network devices to monitor performance. SNMP tools communicate with agents inside devices to inquire about their status and receive trap signals for significant network events">Chapter 4:Internetworking</li>
+        <li data-info="Explore the IP protocol, IP addresses, and Internet control protocols.
+        Learn about OSPF (Interior Gateway Routing Protocol) and BGP (Exterior Gateway Routing Protocol).
+        Discover topics like Internet multicasting, Mobile IP, and IPv6." data-observation="If you’d like to dive deeper into computer networks, you can explore the Computer Network Tutorial on GeeksforGeeks. It covers basic to advanced concepts, including data link layers, network security, and more">Chapter 5:Network Layer in the Internet</li>
+        
+        <!-- Add more chapters as needed -->
+      </ol>
+      <div id="chapterInfo" style="display: none;">
+        <h2>Chapter Information</h2>
+        <p id="chapterDetails"></p>
+      </div>
+      <div id="observationInfo" style="display: none;">
+        <h2>Observation Information</h2>
+        <p id="observationDetails"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var chapters = document.querySelectorAll("#chaptersList li");
+      var chapterInfo = document.getElementById("chapterInfo");
+      var observationInfo = document.getElementById("observationInfo");
+      var chapterDetails = document.getElementById("chapterDetails");
+      var observationDetails = document.getElementById("observationDetails");
+
+      chapters.forEach(function(chapter) {
+        chapter.addEventListener("click", function() {
+          var info = this.getAttribute("data-info");
+          var observation = this.getAttribute("data-observation");
+          chapterDetails.textContent = info;
+          observationDetails.textContent = observation;
+          chapterInfo.style.display = "block";
+          observationInfo.style.display = "block";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

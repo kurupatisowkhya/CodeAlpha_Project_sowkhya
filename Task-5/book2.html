@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book 1: Title of Book 1</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      color: #333; /* Dark text color */
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .page {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* Add margin between pages */
+    }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      color: #2c3e50; /* Dark blue text color */
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #2980b9; /* Blue text color */
+      margin-top: 0;
+    }
+    p {
+      color: #333; /* Dark text color */
+    }
+    ol {
+      margin: 0;
+      padding: 0 0 0 20px;
+      list-style: none;
+    }
+    ol li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      cursor: pointer; /* Change cursor to pointer on hover */
+    }
+    ol li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2980b9; /* Blue bullet color */
+    }
+    #chapterInfo, #observationInfo {
+      background-color: #f9f9f9; /* Light grey background */
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    #chapterDetails, #observationDetails {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333; /* Dark text color */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page">
+      <h1>Book 1: Operating Systems</h1>
+      <h2>Author:Malcolm Gladwell,Yuval Noah Harari and Michelle Obama</h2>
+      <div class="summary">
+        <h2>Summary:</h2>
+        <p>An operating system (OS) serves as the bridge between a computer user and the underlying hardware. It plays a pivotal role in managing and controlling various aspects of a computer system.
+          an operating system orchestrates the intricate dance between software and hardware, ensuring smooth execution of programs and efficient resource utilization.
+        </p>
+      </div>
+      <h2>Chapters:</h2>
+      <ol id="chaptersList">
+        <li data-info="An OS handles essential tasks such as processor management, memory management, file management, and input/output (I/O) operations.
+        It ensures efficient utilization of hardware resources like CPU, memory, storage, and peripherals." data-observation="A unit of length used in astronomy, equivalent to approximately 3.26 light-years.
+        Named after the concept of parallax.">Chapter 1:Resource Management</li>
+        <li data-info="The OS provides an interface for users to interact with the computer.
+        It enables users to run applications, manage files, and perform various tasks." data-observation="Fundamental unit of digital information storage, consisting of 8 bits.
+        Represents a single character in computer systems.">Chapter 2:User Interaction</li>
+        <li data-info="The kernel is the central component of an operating system.
+        It manages core functions, including process scheduling, memory allocation, and hardware communication." data-observation="Unit of temperature measurement in the International System of Units (SI).
+        Absolute zero defined as 0 Kelvin.">Chapter 3:Kernel</li>
+        <li data-info="Monolithic Kernel: A single, large kernel that handles all tasks directly.
+        Microkernel: A modular design where essential functions reside in the kernel, and other services run as separate processes." data-observation="Unit of frequency, representing the number of cycles per second.
+        Used for measuring radio waves, sound waves, and other periodic phenomena.">Chapter 4:Types of Operating Systems</li>
+        <li data-info="Windows, macOS, and Linux are popular desktop OSs.
+        Android powers mobile devices.
+        iOS runs on Apple devices." data-observation="Unit of pressure, equal to 1 newton per square meter (N/m²).
+        Named after Blaise Pascal, the French mathematician and physicist.">Chapter 5:Examples of Operating Systems</li>
+        <!-- Add more chapters as needed -->
+      </ol>
+      <div id="chapterInfo" style="display: none;">
+        <h2>Chapter Information</h2>
+        <p id="chapterDetails"></p>
+      </div>
+      <div id="observationInfo" style="display: none;">
+        <h2>Observation Information</h2>
+        <p id="observationDetails"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var chapters = document.querySelectorAll("#chaptersList li");
+      var chapterInfo = document.getElementById("chapterInfo");
+      var observationInfo = document.getElementById("observationInfo");
+      var chapterDetails = document.getElementById("chapterDetails");
+      var observationDetails = document.getElementById("observationDetails");
+
+      chapters.forEach(function(chapter) {
+        chapter.addEventListener("click", function() {
+          var info = this.getAttribute("data-info");
+          var observation = this.getAttribute("data-observation");
+          chapterDetails.textContent = info;
+          observationDetails.textContent = observation;
+          chapterInfo.style.display = "block";
+          observationInfo.style.display = "block";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

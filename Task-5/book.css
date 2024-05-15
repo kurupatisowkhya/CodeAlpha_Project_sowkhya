@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(154, 211, 245); 
+  color: rgb(135, 144, 146); 
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgb(243, 122, 205); 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(223, 34, 34, 0.866); 
+}
+
+h1 {
+  color: #0e1f2a; /* Dark blue heading color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #14101f; /* Dark blue label color */
+}
+
+select, input[type="text"], button {
+  padding: 10px;
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+select:focus, input[type="text"]:focus, button:focus {
+  outline: none; /* Remove focus outline */
+  border-color: #00070c; /* Blue border color on focus */
+}
+
+#bookList {
+  margin-top: 20px;
+}
+
+.book {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #e8e8e8; /* Light grey book background */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.book:hover {
+  background-color: #dcdcdc; /* Slightly darker grey on hover */
+}
+
+.book h3 {
+  color: #01080c; /* Dark blue book title color */
+  margin-top: 0;
+}
+
+.borrowed {
+  color: #c0392b; /* Dark red borrowed text color */
+  font-weight: bold;
+}

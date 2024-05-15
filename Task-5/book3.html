@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book 1: Title of Book 1</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      color: #333; /* Dark text color */
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .page {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* Add margin between pages */
+    }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      color: #2c3e50; /* Dark blue text color */
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #2980b9; /* Blue text color */
+      margin-top: 0;
+    }
+    p {
+      color: #333; /* Dark text color */
+    }
+    ol {
+      margin: 0;
+      padding: 0 0 0 20px;
+      list-style: none;
+    }
+    ol li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      cursor: pointer; /* Change cursor to pointer on hover */
+    }
+    ol li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2980b9; /* Blue bullet color */
+    }
+    #chapterInfo, #observationInfo {
+      background-color: #f9f9f9; /* Light grey background */
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    #chapterDetails, #observationDetails {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333; /* Dark text color */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page">
+      <h1>Book 1: C programing</h1>
+      <h2>Author: Dionysia Lemonaki</h2>
+      <div class="summary">
+        <h2>Summary:</h2>
+        <p>C is one of the oldest, most widely known, and most influential programming languages.
+          It is used in many industries because it is a highly flexible and powerful language.
+          Learning C is a worthwhile endeavor – no matter your starting point or aspirations – because it builds a solid foundation in the skills you will need for the rest of your programming career.
+          It helps you understand how a computer works underneath the hood, such as how it stores and retrieves information and what the internal architecture looks like.
+          With that said, C can be a difficult language to learn, especially for beginners, as it can be cryptic.
+          This handbook aims to teach you C programming fundamentals and is written with the beginner programmer in mind.
+          There are no prerequisites, and no previous knowledge of any programming concepts is assumed.
+          If you have never programmed before and are a complete beginner, you have come to the right place. </p>
+      </div>
+      <h2>Chapters:</h2>
+      <ol id="chaptersList">
+        <li data-info="In this introductory chapter, you will learn the main characteristics and use cases of the C programming language.
+
+        You will also learn the basics of C syntax and familiarize yourself with the general structure of all C programs.
+        
+        By the end of the chapter, you will have set up a development environment for C programming so you can follow along with the coding examples in this book on your local machine.
+        
+        You will have successfully written, compiled, and executed your first simple C program that prints the text 'Hello, world!' to the screen.
+        You will have also learned some core C language features, such as comments for documenting and explaining your code and escape sequences for representing nonprintable characters in text." data-observation="Computers are not that smart.
+
+        Even though they can process data tirelessly and can perform operations at a very high speed, they cannot think for themselves. They need someone to tell them what to do next.
+        
+        Humans tell computers what to do and exactly how to do it by giving them detailed and step-by-step instructions to follow.
+        
+        A collection of detailed instructions is known as a program.
+        
+        Programming is the process of writing the collection of instructions that a computer can understand and execute to perform a specific task and solve a particular problem.
+        
+        A programming language is used to write the instructions.
+        
+        And the humans who write the instructions and supply them to the computer are known as programmers.">Chapter 1: Introduction to C Programming </li>
+        <li data-info="  Before you can use a variable, you need to declare it – this step lets the compiler know that it should allocate some memory for it.
+
+        C is a strongly typed language, so to declare a variable in C, you first need to specify the type of data the variable will hold, such as an integer to store a whole number, a floating-point number for numbers with decimal places, or a char for a single character.
+        
+        That way, during compilation time, the compiler knows if the variable is able to perform the actions it was set out to do.
+        
+        Once you have specified the data type, you give the variable a name.
+        
+        The general syntax for declaring variables looks something like this:
+        
+        data_type variable_name;   " data-observation="Variables store different kind of data in the computer's memory, and take up a certain amount of space.
+
+        By storing information in a variable, you can retrieve and manipule it, perform various calculations, or even use it to make decisions in your program.
+        
+        The stored data is given a name, and that is how you are able to access it when you need it.">Chapter 2: Variables and Data Types in C</li>
+        <li data-info="The examples you have seen so far all execute line by line, from top to bottom.
+
+        They are not flexible and dynamic and do not adapt according to user behavior or specific situations.
+        
+        In this chapter, you will learn how to make decisions and control the flow of a program.
+        
+        You get to set the rules on what happens next in your programs by setting conditions using conditional statements.
+        
+        Conditional statements take a specific action based on the result of a comparisson that takes place.
+        
+        The program will decide what the next steps should be based on whether the conditions are met or not.
+        
+        Certain parts of the program may not run depending on the results or depending on certain user input. The user can go down different paths depending on the various forks in the road that come up during a program's life.
+        
+        First, you will learn about the if statement – the foundational building block of decision-making in C.
+        
+        You will also learn about the else if and else statements that are added to the if statement to provide additional flexibility to the program." 
+        data-observation="You will then learn about the ternary operator which allows you to condense decision-making logic into a single line of code and improve the readability of your program.">Chapter 3: Conditional Statements in C</li>
+        <li data-info="Arrays offer a versatile and organized way to store multiple pieces of related data that are arranged in an ordered sequence.
+
+        They allow you to store multiple values of the same data type under a single identifier and perform repetitive tasks on each element.
+        To declare an array in C, you first specify the data type of the elements the array will store.
+        means you can create arrays of type int, float, char, and so on.
+        In the previous chapter, you learned the basics of arrays in C.
+        Now, it's time to learn about strings – a special kind of array.
+        Strings are everywhere in programming. They are used to represent names, messages, passwords, and more.
+        " data-observation="In this chapter, you will learn how to declare and initialize arrays. You will also learn how to access individual elements within an array using index notation and modify them.
+        In C, strings are actually arrays of characters. And each character in the string has a specific position within the array.">Chapter 4: Arrays and  Strings in C</li>
+        <li data-info="While this handbook has covered a wide range of topics, there is still so much to learn, as programming is so vast.
+        Once you have built a solid foundation with the basics of C programming, you may want to explore more advanced concepts.
+        You may want to move on to learning about functions, for example. They allow you to write instructions for a specific task and reuse that code throughout your program.
+        You may also want to learn about pointers. Pointers in C are like arrows that show you where a specific piece of information is stored in the computer's memory.
+        Then, you may want to move on to learning about structures. They're like custom data containers that allow you to group different types of information under one name.
+        Lastly, you may want to learn how to work with files. Working with files in C allows you to read from and write to files. This is useful for tasks like saving user data, reading configuration settings, or sharing data between different programs.
+        These suggestions are not a definitive guide – just a few ideas for you to continue your C programming learning journey." data-observation="This marks the end of this introduction to the C programming language.
+        Thank you so much for sticking with it and making it until the end.
+        You learned how to work with variables, various data types, and operators.
+        You also learned how to write conditional statements and loops. And you learned the basics of working with arrays and strings.
+        Hopefully, you have gained a good understanding of some of the fundamentals of C programming, got some inspiration on what to learn next, and are excited to continue your programming journey.">Chapter 1:  Advanced C Topics</li>
+        
+        <!-- Add more chapters as needed -->
+      </ol>
+      <div id="chapterInfo" style="display: none;">
+        <h2>Chapter Information</h2>
+        <p id="chapterDetails"></p>
+      </div>
+      <div id="observationInfo" style="display: none;">
+        <h2>Observation Information</h2>
+        <p id="observationDetails"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var chapters = document.querySelectorAll("#chaptersList li");
+      var chapterInfo = document.getElementById("chapterInfo");
+      var observationInfo = document.getElementById("observationInfo");
+      var chapterDetails = document.getElementById("chapterDetails");
+      var observationDetails = document.getElementById("observationDetails");
+
+      chapters.forEach(function(chapter) {
+        chapter.addEventListener("click", function() {
+          var info = this.getAttribute("data-info");
+          var observation = this.getAttribute("data-observation");
+          chapterDetails.textContent = info;
+          observationDetails.textContent = observation;
+          chapterInfo.style.display = "block";
+          observationInfo.style.display = "block";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

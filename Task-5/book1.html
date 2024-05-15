@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book 1: Title of Book 1</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      color: #333; /* Dark text color */
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .page {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* Add margin between pages */
+    }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      color: #2c3e50; /* Dark blue text color */
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #2980b9; /* Blue text color */
+      margin-top: 0;
+    }
+    p {
+      color: #333; /* Dark text color */
+    }
+    ol {
+      margin: 0;
+      padding: 0 0 0 20px;
+      list-style: none;
+    }
+    ol li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      cursor: pointer; /* Change cursor to pointer on hover */
+    }
+    ol li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2980b9; /* Blue bullet color */
+    }
+    #chapterInfo, #observationInfo {
+      background-color: #f9f9f9; /* Light grey background */
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    #chapterDetails, #observationDetails {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333; /* Dark text color */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page">
+      <h1>Book 1: Data Base Mangement Systems</h1>
+      <h2>Author: Ramez Elmasri and Shamkant B. Navathe,</h2>
+      <div class="summary">
+        <h2>Summary:</h2>
+        <p>Database management systems are now an indispensable tool for managing information. This post contains a listing of the best Database Management System books that offer thorough coverage of DBMS.
+          There are loads of books out there, some are good, some are not so good and some are great. Deciding which one to buy is a bit confusing. 
+          We have researched and compiled a list of the 3 best Database Management System books that can help you learn about every aspect of it.
+          These resources will help you excel at DBMS, and they are suitable for beginners, intermediate learners as well as experts.</p>
+      </div>
+      <h2>Chapters:</h2>
+      <ol id="chaptersList">
+        <li data-info="This book introduces the fundamental concepts necessary for designing, using, and implementing database systems and database applications.
+        The content in this book stresses the fundamentals of database modeling and design, the languages and models provided by the database management systems, and database system implementation techniques.
+        Fundamentals of Database Systems provides an in-depth and up-to-date presentation of the most important aspects of database systems and applications, and related technologies." data-observation="The book assumed that readers are familiar with elementary programming and data-structuring concepts and that they have had some exposure to the basics of computer organization.">Chapter 1:Fundamentals of Database Systems</li>
+        <li data-info="Database System Concepts is one of the best and cornerstone texts of database education. It presents the fundamental concepts of database management in an intuitive manner geared toward allowing students to begin working with databases as quickly as possible.
+        The text is designed for a first course in databases at the junior/senior undergraduate level or the first year graduate level. It also contains additional material that can be used as supplements or as introductory material for an advanced course.
+        Important theoretical results are covered, but formal proofs are omitted. In place of proofs, figures and examples are used to suggest why a result is true." data-observation="Because the authors present concepts as intuitive descriptions, a familiarity with basic data structures, computer organization, and a high-level programming language are the only prerequisites.">Chapter 2:Database System Concepts</li>
+        <li data-info="This book covers the fundamentals of modern database management systems, in particular relational database systems.
+        The book is organized into six main parts plus a collection of advanced topics.
+        They explain how databases are created and used, and cover the basics of database design and querying, including an in-depth treatment of SQL queries
+        Database Management Systems provides comprehensive and up-to-date coverage of the fundamentals of database systems. Coherent explanations and practical examples have made this one of the leading texts in the field.
+        An extensive set of exercises (for which solutions are available online to instructors) accompanies each chapter and reinforces students’ ability to apply the concepts to real problems" data-observation="In this new addition, more applications and examples have been added throughout the book, including SQL and Oracle examples. The applied flavor is further enhanced by the two new database applications chapters.">Chapter 3:Database Management Systems</li>
+        <li data-info="This lean, focused text concentrates on giving students a clear understanding of database fundamentals while providing a broad survey of all the major topics of the field.
+        Mark Gillenson, an associate editor of the Journal of Database Management, has 15 years experience of working with and teaching at IBM Corp. and 15 years of teaching experience at the college level.
+        He writes in a clear, friendly style that progresses step-by-step through all of the major database topics. Each chapter begins with a story about a real company’s database application, and is packed with examples." data-observation="When students finish the text, they will be able to immediately apply what they’ve learned in business.
+
+        ">Chapter 4:Fundamentals of Database Management Systems</li>
+        <li data-info="With this book, you can gain a solid foundation in database design and implementation with the practical, easy-to-understand approach.
+        Diagrams, illustrations, and tables clarify in-depth coverage of database design. You learn the key to successful database implementation as you study how to properly design databases to fit within the larger strategic data environment.
+        Clear, straightforward writing supports an outstanding balance of theory and practice with hands-on skills today’s employers want. Revised SQL coverage offers more SQL examples and simpler explanations that focus on the areas most important for a database career." data-observation="More coverage of Big Data Analytics and NoSQL, including related Hadoop technologies, now provides a stronger hands-on approach.
+        Review questions, problem sets, and cases have been added throughout the book so that students have multiple opportunities to test their understanding and develop real and useful design skills.">Chapter 5:Database Systems: Design, Implementation, & Management</li>
+        <!-- Add more chapters as needed -->
+      </ol>
+      <div id="chapterInfo" style="display: none;">
+        <h2>Chapter Information</h2>
+        <p id="chapterDetails"></p>
+      </div>
+      <div id="observationInfo" style="display: none;">
+        <h2>Observation Information</h2>
+        <p id="observationDetails"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var chapters = document.querySelectorAll("#chaptersList li");
+      var chapterInfo = document.getElementById("chapterInfo");
+      var observationInfo = document.getElementById("observationInfo");
+      var chapterDetails = document.getElementById("chapterDetails");
+      var observationDetails = document.getElementById("observationDetails");
+
+      chapters.forEach(function(chapter) {
+        chapter.addEventListener("click", function() {
+          var info = this.getAttribute("data-info");
+          var observation = this.getAttribute("data-observation");
+          chapterDetails.textContent = info;
+          observationDetails.textContent = observation;
+          chapterInfo.style.display = "block";
+          observationInfo.style.display = "block";
+        });
+      });
+    });
+  </script>
+</body>
+</html>
